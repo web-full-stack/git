@@ -1,1 +1,4 @@
 # git merge
+
+## git squash
+
