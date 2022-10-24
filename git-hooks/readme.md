@@ -63,6 +63,21 @@ https://www.cnblogs.com/xgqfrms/p/16823456.html
 
 ```
 
+> test
+
+```sh
+$ git add git-hooks/readme.md
+
+$ gst
+# -m ✅
+$ git commit -m"python script"
+
+# no message ❌
+$ git commit
+# Aborting commit due to empty commit message.
+
+```
+
 ## refs
 
 https://www.cnblogs.com/xgqfrms/p/16822322.html
