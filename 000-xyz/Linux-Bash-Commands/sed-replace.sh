@@ -19,7 +19,37 @@ echo -e "sed starting"
 
 # ??? 正则 replace multi tags
 
-# sed 不会直接修改源文件, 只是返回一个 STDOUT ✅
+# clear first
+rm -rf ./multi-line-text.md
+
+# 双引号，多行文本 ❌
+# sed -i '' "1i\
+# Perl 🐪 camel\
+# " ./multi-line-text.txt
+# sed: 1: "1iPerl 🐪 camel": command i expects \ followed by text
+
+# 单引号，多行文本 ✅ 直接插入数据到原始文件
+# sed -i '' '1i\
+# Perl 🐪 camel\
+# ' ./multi-line-text.txt
+
+# 1s 正则插入, 单引号 ✅
+# sed -i '' '1s/^/Perl 🐪 camel\n/' ./multi-line-text.txt
+
+# 1s 正则插入, 单引号 + 双引号 ✅
+# sed -i "" '1s/^/Perl 🐪 camel\n/' ./multi-line-text.txt
+
+# 1s 正则插入, 双引号 ✅
+sed -i "" "1s/^/Perl 🐪 camel\n/" ./multi-line-text.txt
+
+
+# sed -i '' "1i\Perl 🐪 camel" ./multi-line-text.txt
+# sed: 1: "1i\Perl 🐪 camel": extra characters after \ at the end of i command
+
+# sed -i '' "1i Perl 🐪 camel" ./multi-line-text.txt
+# sed: 1: "1i Perl 🐪 camel": command i expects \ followed by text
+
+# sed 默认不会直接修改源文件, 只是返回一个 STDOUT ✅
 # sed "s/<div>/👻/" ./multi-line-text.txt
 
 # sed 同时执行多个命令 `-e`, 使用英文的分号分隔 `;` ✅
