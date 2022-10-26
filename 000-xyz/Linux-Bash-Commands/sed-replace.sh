@@ -72,3 +72,6 @@ sed -e "s/<div>/🎉/; s/<\/div>/👻/" ./multi-line-text.txt >> multi-line-text
 # sed 's/<div>/👻' | sed 's/</div>/🎉' multi-line-text.txt => multi-line-text.md
 
 echo -e "sed finished"
+
+
+# echo "this is abc" | sed -e 's/abc/xyz/'

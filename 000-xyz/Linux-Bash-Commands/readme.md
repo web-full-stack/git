@@ -34,3 +34,18 @@ div*10{line 0$}
 <div>line 09</div>
 <div>line 10</div>
  -->
+
+## sed `-f`
+
+```sh
+# 执行 sed 脚本，sed 后面指定文件名写在命令行里
+$ sed -f test.sed ./test.txt
+
+$ sed -f test.sed ./test.txt >> ./test.out.md
+
+# ✅ -n 
+$ sed -f test.sed  -n ./test.txt
+# ❌ -n
+$ sed -f -n test.sed ./test.txt
+
+```
