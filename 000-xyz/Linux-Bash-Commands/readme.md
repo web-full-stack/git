@@ -49,3 +49,26 @@ $ sed -f test.sed  -n ./test.txt
 $ sed -f -n test.sed ./test.txt
 
 ```
+
+```md
+# man ✅
+$ man sed
+
+$ sed --version
+sed: illegal option -- -
+usage: sed script [-Ealnru] [-i extension] [file ...]
+        sed [-Ealnu] [-i extension] [-e script] ... [-f script_file] ... [file ...]
+
+$ sed -v
+sed: illegal option -- v
+usage: sed script [-Ealnru] [-i extension] [file ...]
+        sed [-Ealnu] [-i extension] [-e script] ... [-f script_file] ... [file ...]
+
+$ sed -V
+sed: illegal option -- V
+usage: sed script [-Ealnru] [-i extension] [file ...]
+        sed [-Ealnu] [-i extension] [-e script] ... [-f script_file] ... [file ...]
+
+```
+
+
