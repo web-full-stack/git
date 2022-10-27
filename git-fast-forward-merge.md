@@ -1,0 +1,3 @@
+# git merge
+
+fast-forward
