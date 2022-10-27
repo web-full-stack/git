@@ -1,3 +1,3 @@
 # git merge
 
-merge conflicts
+merge conflicts / 合并冲突
